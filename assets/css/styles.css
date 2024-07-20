@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+:root {
+  --padding-h: 56px;
+}
+
+header {
+  position: absolute;
+  color: white;
+  z-index: 3;
+  display: flex;
+  /* background: red; */
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-inline: var(--padding-h);
+  padding-block: 10px;
+}
+header h4 {
+  font-family: "Manrope", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.4em;
+}
+
+#left-header {
+  display: flex;
+  gap: 30px;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  z-index: 2;
+  padding-inline: var(--padding-h);
+}
+
+.hero-content h1 {
+  font-family: "Anton", sans-serif;
+  line-height: 100%;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 140px;
+}
+
+.hero-content h2 {
+  font-family: "Manrope", sans-serif;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 1.2em;
+}
+
+.hero-content h3 {
+  font-family: "Manrope", sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 1.3em;
+}
+
+.hero-footer {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-animated-text {
+  overflow: hidden;
+}
+
+.animated-text {
+  transform: translateY(100%);
+  animation: slideUp 1.3s ease forwards;
+  animation-delay: 2s;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.who-section {
+  height: 100vh;
+}
