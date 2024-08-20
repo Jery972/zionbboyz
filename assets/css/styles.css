@@ -7,7 +7,7 @@
 body,
 html {
   height: 100%;
-  background-color: #161415;
+  background-color: white;
   color: white;
 }
 
@@ -75,6 +75,7 @@ a:hover {
   position: relative;
   width: 100%;
   height: 100vh;
+  background-color: #161415;
 }
 
 .hero-video {
@@ -149,8 +150,11 @@ a:hover {
 #who-section {
   padding-inline: var(--padding-h);
   padding-block: var(--padding-v);
-  /* max-width: 1440px; */
-  /* margin-inline: auto; */
+  background-color: #161415;
+}
+#who-container {
+  max-width: 1440px;
+  margin-inline: auto;
 }
 .who-text-container {
   display: flex;
@@ -188,11 +192,23 @@ a:hover {
 #work-section {
   padding-inline: var(--padding-h);
   padding-block: var(--padding-v);
-  /* max-width: 1440px; */
-  /* margin-inline: auto; */
+  background-color: #161415;
 }
 #work-section h2 {
   margin-bottom: 56px;
+}
+.background-line {
+  background-color: #161415;
+}
+.simple-line {
+  background-color: white;
+  height: 2px;
+  width: 50%;
+  margin-inline: auto;
+}
+#work-main-container {
+  max-width: 1440px;
+  margin-inline: auto;
 }
 #work-container {
   display: grid;
@@ -245,4 +261,60 @@ a:hover {
   height: 2px;
   background: white;
   margin-right: 16px;
+}
+
+/* CONTACT SECTION */
+
+#contact-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: white;
+  padding-top: 56px;
+}
+#contact-section h1 {
+  text-align: center;
+  color: black;
+  font-family: "Anton", sans-serif;
+  font-size: calc(0.5 * (1.5vh + 44vw));
+  padding-inline: 45px;
+  padding-block: 10px;
+  line-height: 100%;
+  letter-spacing: 0.1em;
+}
+#info-contact {
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 56px;
+  align-items: flex-end;
+}
+
+#left-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#left-contact a {
+  color: black;
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 1.2em;
+}
+
+.arrow-contact {
+  height: 30px;
+  width: 30px;
+}
+
+#right-contact h2 {
+  color: black;
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 1.2em;
 }
