@@ -131,7 +131,7 @@ a:hover {
 .animated-text {
   transform: translateY(100%);
   animation: slideUp 1.3s ease forwards;
-  animation-delay: 3s;
+  animation-delay: 2.5s;
 }
 
 @keyframes slideUp {
@@ -158,7 +158,7 @@ a:hover {
 }
 .who-text-container {
   display: flex;
-  align-items: flex-end;
+  /* align-items: flex-end; */
   justify-content: space-between;
 }
 
@@ -211,6 +211,7 @@ a:hover {
   margin-inline: auto;
 }
 #work-container {
+  margin-top: 100px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 56px;
@@ -274,7 +275,7 @@ a:hover {
   background-color: white;
   padding-top: 56px;
 }
-#contact-section h1 {
+#contact-section h5 {
   text-align: center;
   color: black;
   font-family: "Anton", sans-serif;
@@ -298,19 +299,43 @@ a:hover {
   gap: 10px;
 }
 
-#left-contact a {
+.link-contact {
+  align-self: flex-start;
   color: black;
   font-family: "Manrope", sans-serif;
   font-weight: 500;
   font-size: 36px;
   line-height: 1.2em;
+  transition: transform 0.3s ease;
+  transform-origin: bottom left;
+}
+
+.link-contact:hover {
+  text-decoration: none; /* Retirer le soulignement par défaut */
+  position: relative; /* Nécessaire pour positionner la bordure inférieure */
+  display: inline-block; /* Permet à la bordure de s'étendre sous l'image aussi */
+  transform: scale(1.01);
+}
+
+.link-contact::after {
+  content: ""; /* Nécessaire pour ajouter la bordure avec :after */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0; /* Hauteur de la bordure */
+  background-color: #000; /* Couleur de la bordure */
+  transition: height 0.3s ease;
+}
+
+.link-contact:hover::after {
+  height: 2px; /* Prend toute la largeur au survol */
 }
 
 .arrow-contact {
   height: 30px;
   width: 30px;
 }
-
 #right-contact h2 {
   color: black;
   font-family: "Manrope", sans-serif;
