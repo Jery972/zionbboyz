@@ -13,8 +13,9 @@ html {
 }
 
 :root {
-  --padding-h: 56px;
-  --padding-v: 144px;
+  /* Utiliser des rem pour les paddings globaux */
+  --padding-h: 3.5rem; /* 56px */
+  --padding-v: 9rem; /* 144px */
 }
 
 /* GLOBAL */
@@ -22,20 +23,22 @@ html {
 p {
   font-family: "Manrope", sans-serif;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 1.5rem; /* 24px */
   line-height: 1.3em;
-  max-width: 545px;
+  max-width: 34.06rem; /* 545px */
 }
+
 h2 {
   font-family: "Anton", sans-serif;
-  line-height: 100%;
+  line-height: 1;
   font-weight: normal;
-  font-size: 100px;
+  font-size: 6.25rem; /* 100px */
 }
+
 h3 {
   font-family: "Manrope", sans-serif;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 2.25rem; /* 36px */
   line-height: 1.2em;
 }
 
@@ -49,23 +52,26 @@ header {
   justify-content: space-between;
   width: 100%;
   padding-inline: var(--padding-h);
-  padding-block: 10px;
+  padding-block: 0.625rem; /* 10px */
 }
+
 header h4 {
   font-family: "Manrope", sans-serif;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 1.5rem; /* 24px */
   line-height: 1.4em;
 }
 
 #left-header {
   display: flex;
-  gap: 30px;
+  gap: 1.875rem; /* 30px */
 }
+
 a {
   text-decoration: none;
   color: white;
 }
+
 a:hover {
   text-decoration: underline;
 }
@@ -99,27 +105,27 @@ a:hover {
 
 .hero-content h1 {
   font-family: "Anton", sans-serif;
-  line-height: 100%;
+  line-height: 1;
   font-weight: normal;
-  font-size: 140px;
+  font-size: 8.75rem; /* 140px */
 }
 
 .hero-content h2 {
   font-family: "Manrope", sans-serif;
   font-weight: 500;
-  font-size: 36px;
+  font-size: 2.25rem; /* 36px */
   line-height: 1.2em;
 }
 
 .hero-content h3 {
   font-family: "Manrope", sans-serif;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 1.5rem; /* 24px */
   line-height: 1.3em;
 }
 
 .hero-footer {
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem; /* 24px */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -153,39 +159,45 @@ a:hover {
   padding-block: var(--padding-v);
   background-color: #161415;
 }
+
 #who-container {
-  max-width: 1440px;
+  max-width: 90rem; /* 1440px */
   margin-inline: auto;
 }
+
 .who-text-container {
   display: flex;
-  /* align-items: flex-end; */
   justify-content: space-between;
 }
 
 #profile-container {
   display: flex;
-  gap: 24px;
+  gap: 1.5rem; /* 24px */
 }
 
 .dancer-container img {
   width: 100%;
   filter: grayscale(100%);
 }
+
 .dancer-container img:hover {
   filter: none;
 }
+
 .dancer-container:nth-of-type(1) {
-  margin-top: 100px;
+  margin-top: 6.25rem; /* 100px */
 }
+
 .dancer-container:nth-of-type(2) {
-  margin-top: 200px;
+  margin-top: 12.5rem; /* 200px */
 }
+
 .dancer-container:nth-of-type(3) {
-  margin-top: 180px;
+  margin-top: 11.25rem; /* 180px */
 }
+
 .dancer-container:nth-of-type(4) {
-  margin-top: 136px;
+  margin-top: 8.5rem; /* 136px */
 }
 
 /* WORK SECTION */
@@ -195,35 +207,40 @@ a:hover {
   padding-block: var(--padding-v);
   background-color: #161415;
 }
+
 #work-section h2 {
-  margin-bottom: 56px;
+  margin-bottom: 3.5rem; /* 56px */
 }
+
 .background-line {
   background-color: #161415;
 }
+
 .simple-line {
   background-color: white;
-  height: 2px;
+  height: 0.125rem; /* 2px */
   width: 50%;
   margin-inline: auto;
 }
+
 #work-main-container {
-  max-width: 1440px;
+  max-width: 90rem; /* 1440px */
   margin-inline: auto;
 }
+
 #work-container {
-  margin-top: 100px;
+  margin-top: 6.25rem; /* 100px */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 56px;
-  row-gap: 92px;
+  column-gap: 3.5rem; /* 56px */
+  row-gap: 5.75rem; /* 92px */
 }
 
 .work-content {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: 800px; /* Hauteur fixe pour chaque élément */
+  height: 50rem; /* 800px */
 }
 
 .work-image {
@@ -239,30 +256,34 @@ a:hover {
   width: 100%;
   max-height: 100%;
   scale: 1.15;
-  object-fit: cover; /* Ajuste l'image pour qu'elle couvre entièrement son conteneur */
+  object-fit: cover;
 }
+
 .work-image img:hover {
   filter: none;
   scale: 1;
 }
 
 .work-content:nth-of-type(1) {
-  padding-top: 80px;
+  padding-top: 5rem; /* 80px */
 }
+
 .work-content:nth-of-type(4) {
-  padding-top: 80px;
+  padding-top: 5rem; /* 80px */
 }
+
 .title-work {
   display: flex;
   align-items: center;
-  margin-top: 28px;
-  margin-bottom: 12px;
+  margin-top: 1.75rem; /* 28px */
+  margin-bottom: 0.75rem; /* 12px */
 }
+
 .line {
-  width: 80px;
-  height: 2px;
+  width: 5rem; /* 80px */
+  height: 0.125rem; /* 2px */
   background: white;
-  margin-right: 16px;
+  margin-right: 1rem; /* 16px */
 }
 
 /* CONTACT SECTION */
@@ -274,30 +295,32 @@ a:hover {
   flex-direction: column;
   justify-content: space-around;
   background-color: white;
-  padding-top: 56px;
+  padding-top: 3.5rem; /* 56px */
 }
+
 #contact-section h5 {
   text-align: center;
   color: black;
   font-family: "Anton", sans-serif;
   font-size: calc(0.5 * (1.5vh + 44vw));
-  padding-inline: 45px;
-  padding-block: 10px;
-  line-height: 100%;
+  padding-inline: 2.8125rem; /* 45px */
+  padding-block: 0.625rem; /* 10px */
+  line-height: 1;
   letter-spacing: 0.1em;
 }
+
 #info-contact {
   color: black;
   display: flex;
   justify-content: space-between;
-  padding: 56px;
+  padding: 3.5rem; /* 56px */
   align-items: flex-end;
 }
 
 #left-contact {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.625rem; /* 10px */
 }
 
 .link-contact {
@@ -305,42 +328,43 @@ a:hover {
   color: black;
   font-family: "Manrope", sans-serif;
   font-weight: 500;
-  font-size: 36px;
+  font-size: 2.25rem; /* 36px */
   line-height: 1.2em;
   transition: transform 0.3s ease;
   transform-origin: bottom left;
 }
 
 .link-contact:hover {
-  text-decoration: none; /* Retirer le soulignement par défaut */
-  position: relative; /* Nécessaire pour positionner la bordure inférieure */
-  display: inline-block; /* Permet à la bordure de s'étendre sous l'image aussi */
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
   transform: scale(1.01);
 }
 
 .link-contact::after {
-  content: ""; /* Nécessaire pour ajouter la bordure avec :after */
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 0; /* Hauteur de la bordure */
-  background-color: #000; /* Couleur de la bordure */
+  height: 0;
+  background-color: #000;
   transition: height 0.3s ease;
 }
 
 .link-contact:hover::after {
-  height: 2px; /* Prend toute la largeur au survol */
+  height: 0.125rem; /* 2px */
 }
 
 .arrow-contact {
-  height: 30px;
-  width: 30px;
+  height: 1.875rem; /* 30px */
+  width: 1.875rem; /* 30px */
 }
+
 #right-contact h2 {
   color: black;
   font-family: "Manrope", sans-serif;
   font-weight: 500;
-  font-size: 36px;
+  font-size: 2.25rem; /* 36px */
   line-height: 1.2em;
 }
