@@ -544,3 +544,62 @@ a:hover {
     font-size: 1.125rem; /* 18px */
   }
 }
+
+/* Very small phones (e.g., 320px width) */
+@media (max-width: 320px) {
+  :root {
+    --padding-h: 0.75rem; /* 12px */
+    --padding-v: 3rem; /* 48px */
+  }
+
+  header h4 {
+    font-size: 0.875rem; /* 14px */
+  }
+
+  #left-header {
+    gap: 0.5rem; /* 8px */
+  }
+
+  .hero-content h1 {
+    font-size: 2rem; /* 32px */
+  }
+
+  .hero-content h2 {
+    font-size: 1rem; /* 16px */
+  }
+
+  .hero-content h3 {
+    font-size: 0.875rem; /* 14px */
+  }
+
+  h2 {
+    font-size: 1.75rem; /* 28px */
+  }
+
+  p {
+    font-size: 0.9375rem; /* 15px */
+  }
+
+  #profile-container {
+    grid-template-columns: 1fr; /* single column */
+    gap: 0.75rem; /* 12px */
+  }
+
+  .title-work .line {
+    width: 2rem; /* 32px */
+  }
+
+  #info-contact {
+    padding: 1rem; /* 16px */
+    gap: 1rem; /* 16px */
+  }
+
+  .link-contact {
+    font-size: 1rem; /* 16px */
+  }
+
+  .arrow-contact {
+    width: 1rem;
+    height: 1rem;
+  }
+}
