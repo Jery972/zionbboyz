@@ -18,6 +18,13 @@ html {
   --padding-v: 9rem; /* 144px */
 }
 
+/* Médias fluides */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 /* GLOBAL */
 
 p {
@@ -367,4 +374,173 @@ a:hover {
   font-weight: 500;
   font-size: 2.25rem; /* 36px */
   line-height: 1.2em;
+}
+/* ============== RESPONSIVE ============== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  :root {
+    --padding-h: 2rem; /* 32px */
+    --padding-v: 6rem; /* 96px */
+  }
+
+  header h4 {
+    font-size: 1.25rem; /* 20px */
+  }
+
+  .hero-content h1 {
+    font-size: 6rem; /* 96px */
+  }
+
+  .who-text-container {
+    gap: 1.5rem;
+  }
+
+  #work-container {
+    column-gap: 2rem;
+    row-gap: 3rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  :root {
+    --padding-h: 1rem; /* 16px */
+    --padding-v: 3.5rem; /* 56px */
+  }
+
+  header {
+    padding-inline: var(--padding-h);
+  }
+
+  #left-header {
+    gap: 0.75rem; /* 12px */
+  }
+
+  header h4 {
+    font-size: 1rem; /* 16px */
+  }
+
+  /* Hero */
+  .hero-content {
+    padding-inline: var(--padding-h);
+  }
+
+  .hero-content h1 {
+    font-size: 3.25rem; /* ~52px */
+  }
+
+  .hero-content h2 {
+    font-size: 1.125rem; /* 18px */
+  }
+
+  .hero-content h3 {
+    font-size: 1rem; /* 16px */
+  }
+
+  .hero-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  /* Who section */
+  .who-text-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  h2 {
+    font-size: 3rem; /* 48px */
+  }
+
+  p {
+    font-size: 1rem; /* 16px */
+    max-width: 100%;
+  }
+
+  #profile-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .dancer-container:nth-of-type(1),
+  .dancer-container:nth-of-type(2),
+  .dancer-container:nth-of-type(3),
+  .dancer-container:nth-of-type(4) {
+    margin-top: 0;
+  }
+
+  /* Work section */
+  #work-container {
+    grid-template-columns: 1fr;
+    row-gap: 2.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .work-content {
+    height: auto;
+  }
+
+  .work-image img {
+    scale: 1;
+  }
+
+  .work-content:nth-of-type(1),
+  .work-content:nth-of-type(4) {
+    padding-top: 0;
+  }
+
+  .title-work .line {
+    width: 3rem;
+  }
+
+  /* Contact */
+  #contact-section {
+    height: auto;
+    min-height: 70vh;
+    padding-top: 2rem;
+  }
+
+  #contact-section h5 {
+    font-size: 12vw;
+    padding-inline: 1rem;
+  }
+
+  #info-contact {
+    padding: 1.25rem; /* 20px */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .link-contact {
+    font-size: 1.25rem; /* 20px */
+  }
+
+  .arrow-contact {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  #right-contact h2 {
+    font-size: 1.5rem; /* 24px */
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2.5rem; /* 40px */
+  }
+
+  h2 {
+    font-size: 2.25rem; /* 36px */
+  }
+
+  .link-contact {
+    font-size: 1.125rem; /* 18px */
+  }
 }
