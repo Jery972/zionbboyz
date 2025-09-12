@@ -461,9 +461,35 @@ a:hover {
 
   #profile-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
     margin-top: 2rem;
+    justify-items: stretch;
+    align-items: stretch;
+  }
+
+  .dancer-container {
+    width: 100%;
+    min-width: 0; /* permet le shrink des éléments en CSS Grid */
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Empêcher le débordement de texte dans les cartes */
+  .dancer-container h3,
+  .dancer-container p {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  /* Uniformiser les images des danseurs en taille carrée */
+  .dancer-container img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
   }
 
   .dancer-container:nth-of-type(1),
