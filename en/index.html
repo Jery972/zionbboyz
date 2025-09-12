@@ -8,12 +8,49 @@
       name="description"
       content="Zion Bboyz is a breaking dance company based in Martinique, specializing in captivating performances and innovative workshops. Discover our dynamic events, artistic creations, and unique workshops that enrich the urban dance scene."
     />
-    <title>Company Zion Bboyz - expanded breaking</title>
+    <title>Zion Bboyz Company - Expanded Breaking</title>
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="canonical" href="https://zionbboyz.com/en/" />
     <link rel="alternate" hreflang="fr" href="https://zionbboyz.com/" />
     <link rel="alternate" hreflang="en" href="https://zionbboyz.com/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://zionbboyz.com/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Zion Bboyz Company - Expanded Breaking"
+    />
+    <meta
+      property="og:description"
+      content="Zion Bboyz is a breaking dance company based in Martinique, specializing in captivating performances and innovative workshops. Discover our dynamic events, artistic creations, and unique workshops that enrich the urban dance scene."
+    />
+    <meta property="og:url" content="https://zionbboyz.com/en/" />
+    <meta
+      property="og:image"
+      content="https://zionbboyz.com/assets/images/work1.jpg"
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Zion Bboyz Company - Expanded Breaking"
+    />
+    <meta
+      name="twitter:description"
+      content="Zion Bboyz is a breaking dance company based in Martinique, specializing in captivating performances and innovative workshops. Discover our dynamic events, artistic creations, and unique workshops that enrich the urban dance scene."
+    />
+    <meta
+      name="twitter:image"
+      content="https://zionbboyz.com/assets/images/work1.jpg"
+    />
+    <meta name="theme-color" content="#161415" />
     <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link
+      rel="preload"
+      as="video"
+      href="../assets/videos/zion_highlight.mp4"
+      type="video/mp4"
+      fetchpriority="high"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -38,7 +75,18 @@
       </div>
     </header>
     <section id="hero-section">
-      <video class="hero-video" autoplay muted loop>
+      <div class="hero-loader" aria-hidden="true">
+        <div class="spinner" role="status" aria-label="Loading video"></div>
+      </div>
+      <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        poster="../assets/images/work1.jpg"
+      >
         <source src="../assets/videos/zion_highlight.mp4" type="video/mp4" />
         Your browser does not support HTML5 video.
       </video>
@@ -72,12 +120,43 @@
           </div>
           <div class="hero-lang container-animated-text">
             <h3 class="animated-text">
-              <a href="../">Fr</a> / <a href="/en/">En</a>
+              <a href="/">Fr</a> / <a href="/en/">En</a>
             </h3>
           </div>
         </div>
       </div>
     </section>
+    <script>
+      (function () {
+        var section = document.getElementById("hero-section");
+        if (!section) return;
+        var video = section.querySelector("video.hero-video");
+        var loader = section.querySelector(".hero-loader");
+        if (!video || !loader) return;
+
+        function hideLoader() {
+          loader.style.opacity = "0";
+          setTimeout(function () {
+            loader.style.display = "none";
+          }, 300);
+        }
+
+        if (video.readyState >= 2) {
+          hideLoader();
+        } else {
+          video.addEventListener("loadeddata", hideLoader, { once: true });
+          video.addEventListener("canplay", hideLoader, { once: true });
+          video.addEventListener("error", hideLoader, { once: true });
+          window.addEventListener(
+            "load",
+            function () {
+              setTimeout(hideLoader, 1500);
+            },
+            { once: true }
+          );
+        }
+      })();
+    </script>
     <div id="dark-gradient-wrapper">
       <section id="who-section">
         <div id="who-container">
@@ -92,24 +171,44 @@
           </div>
           <div id="profile-container">
             <div class="dancer-container">
-              <img src="../assets/images/joss.jpg" alt="Joss profile" />
+              <img
+                src="../assets/images/joss.jpg"
+                alt="Joss profile"
+                loading="lazy"
+                decoding="async"
+              />
               <h3>Joss</h3>
               <p>Bboy, contemporary dancer, breaking teacher</p>
             </div>
             <div class="dancer-container">
-              <img src="../assets/images/dom.jpg" alt="Dom profile" />
-              <h3>Domi</h3>
+              <img
+                src="../assets/images/dom.jpg"
+                alt="Dom profile"
+                loading="lazy"
+                decoding="async"
+              />
+              <h3>Dom</h3>
               <p>
                 Bboy, contemporary dancer, breaking teacher, event organizer
               </p>
             </div>
             <div class="dancer-container">
-              <img src="../assets/images/madak.jpg" alt="Madak profile" />
+              <img
+                src="../assets/images/madak.jpg"
+                alt="Madak profile"
+                loading="lazy"
+                decoding="async"
+              />
               <h3>Madak</h3>
               <p>Bboy, contemporary dancer, breaking teacher</p>
             </div>
             <div class="dancer-container">
-              <img src="../assets/images/jery.jpg" alt="Jery profile" />
+              <img
+                src="../assets/images/jery.jpg"
+                alt="Jery profile"
+                loading="lazy"
+                decoding="async"
+              />
               <h3>Jery</h3>
               <p>Bboy, event organizer</p>
             </div>
@@ -134,6 +233,8 @@
                 <img
                   src="../assets/images/work1.jpg"
                   alt="photo of a dance conference"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="title-work">
@@ -151,6 +252,8 @@
                 <img
                   src="../assets/images/work2.jpg"
                   alt="photo of an artistic creation"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="title-work">
@@ -165,7 +268,12 @@
             </div>
             <div class="work-content">
               <div class="work-image">
-                <img src="../assets/images/work3.jpg" alt="photo of a show" />
+                <img
+                  src="../assets/images/work3.jpg"
+                  alt="photo of a show"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
               <div class="title-work">
                 <div class="line"></div>
@@ -181,6 +289,8 @@
                 <img
                   src="../assets/images/work4.jpg"
                   alt="photo of a workshop"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div class="title-work">
@@ -206,16 +316,21 @@
             <img
               class="arrow-contact"
               src="../assets/images/arrow.svg"
+              loading="lazy"
+              decoding="async"
               alt="arrow symbol"
           /></a>
           <a
             href="https://www.instagram.com/zionbboyz"
             class="link-contact"
             target="_blank"
+            rel="noopener noreferrer"
             >Instagram
             <img
               class="arrow-contact"
               src="../assets/images/arrow.svg"
+              loading="lazy"
+              decoding="async"
               alt="arrow symbol"
           /></a>
           <a href="tel:+33669348431" class="link-contact"
@@ -223,6 +338,8 @@
             <img
               class="arrow-contact"
               src="../assets/images/arrow.svg"
+              loading="lazy"
+              decoding="async"
               alt="arrow symbol"
           /></a>
         </div>

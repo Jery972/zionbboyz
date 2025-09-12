@@ -1,0 +1,9 @@
+# robots.txt for zionbboyz.com
+
+User-agent: *
+Allow: /
+
+# Ajoutez la ligne ci-dessous lorsque vous aurez un sitemap
+# Sitemap: https://zionbboyz.com/sitemap.xml
+
+
