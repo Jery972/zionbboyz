@@ -164,7 +164,7 @@ a:hover {
 #who-section {
   padding-inline: var(--padding-h);
   padding-block: var(--padding-v);
-  background-color: #161415;
+  background-color: transparent;
 }
 
 #who-container {
@@ -212,7 +212,7 @@ a:hover {
 #work-section {
   padding-inline: var(--padding-h);
   padding-block: var(--padding-v);
-  background-color: #161415;
+  background-color: transparent;
 }
 
 #work-section h2 {
@@ -220,7 +220,12 @@ a:hover {
 }
 
 .background-line {
-  background-color: #161415;
+  background-color: transparent;
+}
+
+/* Gradient wrapper covering WHO + divider + WORK */
+#dark-gradient-wrapper {
+  background: linear-gradient(to bottom, #161415 0%, #0b0b0b 100%);
 }
 
 .simple-line {
@@ -525,8 +530,9 @@ a:hover {
 
   /* Contact */
   #contact-section {
-    height: auto;
-    min-height: 70vh;
+    height: 100vh; /* fallback */
+    height: 100dvh; /* iOS/modern browsers stable viewport */
+    min-height: 100svh; /* small viewport for older mobile nav behavior */
     padding-top: 2rem;
   }
 
